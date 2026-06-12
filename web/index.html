@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            Hotel Reservas
+        </div>
+
+        <div class="menu">
+            <button>Quartos</button>
+            <button>Reservas</button>
+            <button>Sobre</button>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <div class="topo">
+            <h1>Quartos Cadastrados</h1>
+        </div>
+
+        <div class="card formulario">
+
+            <h2>Cadastrar Quarto</h2>
+
+            <input type="text" id="numero" placeholder="Número do quarto">
+
+            <input type="text" id="tipo" placeholder="Tipo do quarto">
+
+            <button onclick="cadastrarQuarto()">
+                Cadastrar
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Lista de Quartos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaQuartos">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="card" id="areaReservas">
+
+            <h2>Selecione um quarto para visualizar as reservas</h2>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <div id="modalExcluir" class="modal" style="display:none">
+
+    <div class="modal-content">
+
+        <div class="icone-alerta">
+            !
+        </div>
+
+        <h3 id="tituloModal">Excluir</h3>
+
+        <p id="textoModal"></p>
+
+        <div class="modal-buttons">
+
+            <button
+                class="btn-cancelar"
+                onclick="fecharModal()"
+            >
+                Cancelar
+            </button>
+
+            <button
+                class="btn-confirmar"
+                id="btnConfirmar"
+            >
+                Excluir
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
